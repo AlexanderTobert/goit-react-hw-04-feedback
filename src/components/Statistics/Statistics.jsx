@@ -1,4 +1,5 @@
 import React from 'react'
+import css from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     const textElements = ['Good', 'Neutral', 'Bad', 'Total', 'Positive feedback'];
@@ -8,10 +9,10 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
         <div>
             {
                 textElements.map((item, index) => (
-                    <p>
+                    <p className={css.item}>
                         {item}: <span
                             key={item}
-                            style={{ color: index === 4 && positivePercentage > 75 ? 'green' : 'black' }}
+                            style={{ color: index === 4 && positivePercentage >= 75 ? 'green' : 'black' }}
                             >
                             {index !== 4 ? values[index] : values[index] + '%'}
                             </span>;
