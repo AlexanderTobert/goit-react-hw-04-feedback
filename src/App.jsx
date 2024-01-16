@@ -29,6 +29,7 @@ const App = () => {
 
   return (
     <>
+      
       <Section title="Please leave feedback">
         <FeedbackOptions
           options={btnElements}
@@ -48,6 +49,7 @@ const App = () => {
             positivePercentage={positivePercentage}
           />
         )}
+        
       </Section>
     </>
   );
